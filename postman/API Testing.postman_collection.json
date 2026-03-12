@@ -1,0 +1,875 @@
+{
+  "info": {
+    "_postman_id": "c7f2bb9c-e70d-4b0e-a56f-f43426a759e2",
+    "name": "API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43044330"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Register",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\": \"Onkar Ijare\",\r\n\"email\": \"onkarijare@test.com\",\r\n\"password\": \"123456\",\r\n\"role\": \"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/auth/register",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:14:22 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "37",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"userId\": 2,\n    \"message\": \"User Created\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"email\": \"onkarijare@test.com\",\r\n\"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/auth/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:16:15 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "295",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzczMzMyNDc1LCJpYXQiOjE3NzMzMzIxNzUsImp0aSI6ImE0NzQzOTE0NzNlNDRmNjk4NWM1YWVjNzdhNTUwY2YyIiwidXNlcl9pZCI6IjIifQ._M3MQiSLysayrycjFRzGl_n5OjSYBV-FgIllcdgkS5k\",\n    \"user\": {\n        \"id\": 2,\n        \"name\": \"Onkar Ijare\",\n        \"role\": \"admin\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Create Project",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\": \"Library Management Project\",\r\n\"description\": \"Online Library Management Project\",\r\n\"start_date\": \"2026-03-10\",\r\n\"end_date\": \"2026-09-10\",\r\n\"status\": \"active\",\r\n\"created_by\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/projects/create",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "projects",
+                "create"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:18:16 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "220",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 4,\n    \"name\": \"Library Management Project\",\n    \"description\": \"Online Library Management Project\",\n    \"start_date\": \"2026-03-10\",\n    \"end_date\": \"2026-09-10\",\n    \"status\": \"active\",\n    \"created_at\": \"2026-03-12T16:18:16.733574Z\",\n    \"created_by\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Get Projects",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/projects",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "projects"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:19:13 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "822",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Bridge Construction\",\n        \"description\": \"City bridge project\",\n        \"start_date\": \"2026-03-10\",\n        \"end_date\": \"2026-09-10\",\n        \"status\": \"active\",\n        \"created_at\": \"2026-03-12T15:56:40.218523Z\",\n        \"created_by\": 1\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Bridge Construction\",\n        \"description\": \"City bridge project\",\n        \"start_date\": \"2026-03-10\",\n        \"end_date\": \"2026-09-10\",\n        \"status\": \"active\",\n        \"created_at\": \"2026-03-12T16:04:07.085161Z\",\n        \"created_by\": 1\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Bridge Construction\",\n        \"description\": \"City bridge project\",\n        \"start_date\": \"2026-03-10\",\n        \"end_date\": \"2026-09-10\",\n        \"status\": \"active\",\n        \"created_at\": \"2026-03-12T16:04:23.671782Z\",\n        \"created_by\": 1\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Library Management Project\",\n        \"description\": \"Online Library Management Project\",\n        \"start_date\": \"2026-03-10\",\n        \"end_date\": \"2026-09-10\",\n        \"status\": \"active\",\n        \"created_at\": \"2026-03-12T16:18:16.733574Z\",\n        \"created_by\": 1\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get single project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Get single project",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/projects/4",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "projects",
+                "4"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:20:16 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "220",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 4,\n    \"name\": \"Library Management Project\",\n    \"description\": \"Online Library Management Project\",\n    \"start_date\": \"2026-03-10\",\n    \"end_date\": \"2026-09-10\",\n    \"status\": \"active\",\n    \"created_at\": \"2026-03-12T16:18:16.733574Z\",\n    \"created_by\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "Update Project",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\":\"Bridge Construction Updated\",\r\n\"description\":\"Updated description\",\r\n\"status\":\"active\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/projects/3/update",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "projects",
+                "3",
+                "update"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:23:07 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "PUT, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "122",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"start_date\": [\n        \"This field is required.\"\n    ],\n    \"end_date\": [\n        \"This field is required.\"\n    ],\n    \"created_by\": [\n        \"This field is required.\"\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "New request",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/projects/1/delete",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "projects",
+                "1",
+                "delete"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:23:51 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "DELETE, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "21",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Deleted\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "DPR Create",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "DPR Create",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"project_id\":2,\r\n\"user_id\":1,\r\n\"date\":\"2026-03-11\",\r\n\"work_description\":\"Concrete pouring completed\",\r\n\"weather\":\"Sunny\",\r\n\"worker_count\":15\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/reports/create",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "reports",
+                "create"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:27:00 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "POST, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "182",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 1,\n    \"date\": \"2026-03-11\",\n    \"work_description\": \"Concrete pouring completed\",\n    \"weather\": \"Sunny\",\n    \"worker_count\": 15,\n    \"created_at\": \"2026-03-12T16:27:00.670275Z\",\n    \"project_id\": 2,\n    \"user_id\": 1\n}"
+        }
+      ]
+    },
+    {
+      "name": "DPR List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": [
+        {
+          "name": "DPR List",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/reports/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "reports",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "JSON",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Thu, 12 Mar 2026 16:28:11 GMT",
+              "type": "text"
+            },
+            {
+              "key": "Server",
+              "value": "WSGIServer/0.2 CPython/3.12.10",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept, Cookie",
+              "type": "text"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS",
+              "type": "text"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY",
+              "type": "text"
+            },
+            {
+              "key": "Content-Length",
+              "value": "184",
+              "type": "text"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff",
+              "type": "text"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin",
+              "type": "text"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 1,\n        \"date\": \"2026-03-11\",\n        \"work_description\": \"Concrete pouring completed\",\n        \"weather\": \"Sunny\",\n        \"worker_count\": 15,\n        \"created_at\": \"2026-03-12T16:27:00.670275Z\",\n        \"project_id\": 2,\n        \"user_id\": 1\n    }\n]"
+        }
+      ]
+    }
+  ]
+}
